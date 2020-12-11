@@ -1,4 +1,4 @@
-package controller;
+package com.expedia.calender.controller;
 
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.http.MediaType;
@@ -7,9 +7,8 @@ import org.springframework.web.bind.annotation.RequestBody;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RestController;
 
-import model.Event;
-import model.request.EventRequestType;
-import service.IEventService;
+import com.expedia.calender.model.Event;
+import com.expedia.calender.service.IEventService;
 
 @RestController
 @RequestMapping(value = "/event")

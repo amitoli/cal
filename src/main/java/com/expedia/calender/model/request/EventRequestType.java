@@ -1,4 +1,4 @@
-package model.request;
+package com.expedia.calender.model.request;
 
 import java.time.LocalDateTime;
 

@@ -1,4 +1,4 @@
-package model;
+package com.expedia.calender.model;
 
 public enum EventType
 {
