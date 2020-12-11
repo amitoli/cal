@@ -20,9 +20,9 @@ public class EventService implements IEventService
 	}
 
 	@Transactional
-	public void createEvent(Event event){
+	public Event createEvent(Event event){
 
-		eventRepository.save(event);
+		return eventRepository.save(event);
 
 	}
 }
