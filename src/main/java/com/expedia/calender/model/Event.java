@@ -1,7 +1,6 @@
 package com.expedia.calender.model;
 
 import java.time.LocalDateTime;
-import java.util.List;
 import javax.persistence.Entity;
 import javax.persistence.GeneratedValue;
 import javax.persistence.GenerationType;
@@ -16,11 +15,10 @@ public class Event {
 
   @Id
   @GeneratedValue(strategy = GenerationType.IDENTITY)
-  int id;
+  Integer id;
   String title;
   LocalDateTime startTime;
   LocalDateTime endTime;
   String location;
   String user;
-  List<String> participants;
 }
