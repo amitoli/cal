@@ -1,6 +1,7 @@
 package com.expedia.calender.model;
 
 import java.time.LocalDateTime;
+import java.util.List;
 
 import javax.persistence.Entity;
 import javax.persistence.GeneratedValue;
@@ -21,5 +22,6 @@ public class Event
 	LocalDateTime startTime;
 	LocalDateTime endTime;
 	String location;
-	String owner;
+	String user;
+	List<String> participants;
 }

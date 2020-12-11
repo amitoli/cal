@@ -1,5 +1,7 @@
 package com.expedia.calender.service;
 
+import java.time.LocalDateTime;
+
 import javax.transaction.Transactional;
 
 import org.springframework.beans.factory.annotation.Autowired;
@@ -24,5 +26,10 @@ public class EventServiceImpl implements EventService
 
 		return eventRepository.save(event);
 
+	}
+
+	@Override public Event getEvent(String user, LocalDateTime startDate, LocalDateTime endDate)
+	{
+		return eventRepository.
 	}
 }
