@@ -30,7 +30,7 @@ public class EventController
 	}
 
 	@DeleteMapping
-	public ResponseEntity<Void> deleteEvent(@RequestParam int eventId){
+	public ResponseEntity<Void> deleteEvent(@RequestParam("id") int eventId){
 		//eventService.deleteEvent(eventId);
 		return ResponseEntity.status(HttpStatus.OK).build();
 	}
