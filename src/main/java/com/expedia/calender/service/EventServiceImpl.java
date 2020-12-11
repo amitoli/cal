@@ -1,6 +1,7 @@
 package com.expedia.calender.service;
 
 import java.time.LocalDateTime;
+import java.util.List;
 
 import javax.transaction.Transactional;
 
@@ -28,8 +29,9 @@ public class EventServiceImpl implements EventService
 
 	}
 
-	@Override public Event getEvent(String user, LocalDateTime startDate, LocalDateTime endDate)
+	@Override public List<Event> getEvents(String user, LocalDateTime startDate, LocalDateTime endDate)
 	{
-		return eventRepository.
+
+		return eventRepository.getEvent(user,startDate,endDate);
 	}
 }

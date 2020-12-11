@@ -1,6 +1,8 @@
 package com.expedia.calender.controller;
 
+import java.time.LocalDate;
 import java.time.LocalDateTime;
+import java.util.List;
 
 import com.expedia.calender.model.Event;
 import com.expedia.calender.service.EventService;
@@ -39,8 +41,8 @@ public class EventController
 	}
 
 	@GetMapping
-	public ResponseEntity<Event> getEvent(@RequestParam String user, LocalDateTime startDate, LocalDateTime endDate){
-		Event event = eventService.getEvent(user,startDate,endDate);
+	public ResponseEntity<List<Event>> getEvents(@RequestParam String user, LocalDate startDate, LocalDate endDate){
+		List<Event> event = eventService.getEvents(user,startDate.atStartOfDay(),endDate.atStartOfDay());
 		return ResponseEntity.status(HttpStatus.OK).body(event);
 	}
 
