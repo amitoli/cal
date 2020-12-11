@@ -3,6 +3,7 @@ package com.expedia.calender.controller;
 import com.expedia.calender.model.Event;
 import com.expedia.calender.service.IEventService;
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.http.HttpStatus;
 import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.PostMapping;
 import org.springframework.web.bind.annotation.RequestBody;
@@ -23,7 +24,7 @@ public class EventController
 	@PostMapping
 	public ResponseEntity<Event> createEvent(@RequestBody Event event){
 		Event eventCreated = eventService.createEvent(event);
-		return ResponseEntity.ok(eventCreated);
+		return ResponseEntity.status(HttpStatus.CREATED).body(eventCreated);
 	}
 
 }
