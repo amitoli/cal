@@ -1,7 +1,6 @@
 package com.expedia.calender.model;
 
 import javax.persistence.Entity;
-
 import lombok.Getter;
 import lombok.Setter;
 

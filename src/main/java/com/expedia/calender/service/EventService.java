@@ -1,10 +1,8 @@
 package com.expedia.calender.service;
 
-import java.time.LocalDate;
-import java.time.LocalDateTime;
-import java.util.List;
-
 import com.expedia.calender.model.Event;
+import java.time.LocalDate;
+import java.util.List;
 
 public interface EventService {
 

@@ -1,11 +1,9 @@
 package com.expedia.calender.controller;
 
-import java.time.LocalDate;
-import java.time.LocalDateTime;
-import java.util.List;
-
 import com.expedia.calender.model.Event;
 import com.expedia.calender.service.EventService;
+import java.time.LocalDate;
+import java.util.List;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.http.HttpStatus;
 import org.springframework.http.ResponseEntity;

@@ -1,19 +1,15 @@
 package com.expedia.calender.service.impl;
 
+import com.expedia.calender.dao.EventRepository;
+import com.expedia.calender.model.Event;
 import com.expedia.calender.service.EventService;
 import java.time.LocalDate;
 import java.time.LocalDateTime;
 import java.time.temporal.ChronoUnit;
-import java.time.temporal.TemporalUnit;
 import java.util.List;
-
 import javax.transaction.Transactional;
-
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
-
-import com.expedia.calender.dao.EventRepository;
-import com.expedia.calender.model.Event;
 
 @Service
 public class EventServiceImpl implements EventService {
