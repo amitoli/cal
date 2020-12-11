@@ -1,8 +1,9 @@
 package service;
 
+import model.Event;
 import model.request.EventRequestType;
 
 public interface IEventService
 {
-	public void createEvent(EventRequestType eventRequestType);
+	public void createEvent(Event event);
 }

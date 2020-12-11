@@ -7,6 +7,7 @@ import org.springframework.web.bind.annotation.RequestBody;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RestController;
 
+import model.Event;
 import model.request.EventRequestType;
 import service.IEventService;
 
@@ -21,9 +22,9 @@ public class EventController
 		this.eventService = eventService;
 	}
 
-	@PostMapping(value = "/createEvent",consumes = MediaType.APPLICATION_JSON_VALUE)
-	public String createEvent(@RequestBody EventRequestType eventRequestType){
-		eventService.createEvent(eventRequestType);
+	@PostMapping(value = "/create",consumes = MediaType.APPLICATION_JSON_VALUE)
+	public String createEvent(@RequestBody Event event){
+		eventService.createEvent(event);
 		return "200";
 	}
 

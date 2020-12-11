@@ -21,11 +21,8 @@ public class EventService implements IEventService
 	}
 
 	@Transactional
-	public void createEvent(EventRequestType eventRequestType){
-		Event event = new Event();
-		event.setStartTime(eventRequestType.getStartTime());
-		event.setEndTime(eventRequestType.getEndTime());
-		event.setTitle(eventRequestType.getTitle());
+	public void createEvent(Event event){
+
 		eventRepository.save(event);
 
 	}
