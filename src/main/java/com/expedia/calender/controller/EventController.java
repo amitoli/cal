@@ -1,7 +1,7 @@
 package com.expedia.calender.controller;
 
 import com.expedia.calender.model.Event;
-import com.expedia.calender.service.IEventService;
+import com.expedia.calender.service.EventService;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.http.HttpStatus;
 import org.springframework.http.ResponseEntity;
@@ -16,10 +16,10 @@ import org.springframework.web.bind.annotation.RestController;
 @RequestMapping(value = "/event")
 public class EventController
 {
-	IEventService eventService;
+	EventService eventService;
 
 	@Autowired
-	public EventController(IEventService eventService){
+	public EventController(EventService eventService){
 		this.eventService = eventService;
 	}
 
