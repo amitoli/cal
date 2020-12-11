@@ -13,15 +13,15 @@ import lombok.Setter;
 @Entity
 @Getter
 @Setter
-public class Event
-{
-	@Id
-	@GeneratedValue(strategy = GenerationType.IDENTITY)
-	int id;
-	String title;
-	LocalDateTime startTime;
-	LocalDateTime endTime;
-	String location;
-	String user;
-	List<String> participants;
+public class Event {
+
+  @Id
+  @GeneratedValue(strategy = GenerationType.IDENTITY)
+  int id;
+  String title;
+  LocalDateTime startTime;
+  LocalDateTime endTime;
+  String location;
+  String user;
+  List<String> participants;
 }

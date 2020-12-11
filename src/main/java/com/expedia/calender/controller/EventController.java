@@ -19,31 +19,32 @@ import org.springframework.web.bind.annotation.RestController;
 
 @RestController
 @RequestMapping(value = "/event")
-public class EventController
-{
-	EventService eventService;
+public class EventController {
 
-	@Autowired
-	public EventController(EventService eventService){
-		this.eventService = eventService;
-	}
+  EventService eventService;
 
-	@PostMapping
-	public ResponseEntity<Event> createEvent(@RequestBody Event event){
-		Event eventCreated = eventService.createEvent(event);
-		return ResponseEntity.status(HttpStatus.CREATED).body(eventCreated);
-	}
+  @Autowired
+  public EventController(EventService eventService) {
+    this.eventService = eventService;
+  }
 
-	@DeleteMapping
-	public ResponseEntity<Void> deleteEvent(@RequestParam("id") int eventId){
-		//eventService.deleteEvent(eventId);
-		return ResponseEntity.status(HttpStatus.OK).build();
-	}
+  @PostMapping
+  public ResponseEntity<Event> createEvent(@RequestBody Event event) {
+    Event eventCreated = eventService.createEvent(event);
+    return ResponseEntity.status(HttpStatus.CREATED).body(eventCreated);
+  }
 
-	@GetMapping
-	public ResponseEntity<List<Event>> getEvents(@RequestParam String user, LocalDate startDate, LocalDate endDate){
-		List<Event> event = eventService.getEvents(user,startDate.atStartOfDay(),endDate.atStartOfDay());
-		return ResponseEntity.status(HttpStatus.OK).body(event);
-	}
+  @DeleteMapping
+  public ResponseEntity<Void> deleteEvent(@RequestParam("id") int eventId) {
+    //eventService.deleteEvent(eventId);
+    return ResponseEntity.status(HttpStatus.OK).build();
+  }
+
+  @GetMapping
+  public ResponseEntity<List<Event>> getEvents(@RequestParam String user, LocalDate startDate,
+      LocalDate endDate) {
+    List<Event> event = eventService.getEvents(user, startDate, endDate);
+    return ResponseEntity.status(HttpStatus.OK).body(event);
+  }
 
 }

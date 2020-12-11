@@ -10,8 +10,9 @@ import org.springframework.stereotype.Repository;
 import com.expedia.calender.model.Event;
 
 @Repository
-public interface EventRepository extends JpaRepository<Event,Integer>//Datatype of
+public interface EventRepository extends JpaRepository<Event, Integer>//Datatype of
 {
-	@Query(value = "SELECT * FROM EVENT WHERE USER ")
-	public List<Event> getEvent(String user, LocalDateTime startDate, LocalDateTime endDate);
+
+  @Query(value = "SELECT * FROM EVENT WHERE USER ")
+  public List<Event> getEvent(String user, LocalDateTime startDate, LocalDateTime endDate);
 }

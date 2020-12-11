@@ -8,8 +8,8 @@ import lombok.Setter;
 @Entity
 @Getter
 @Setter
-public class Attendee
-{
-	String name;
-	String email;
+public class Attendee {
+
+  String name;
+  String email;
 }

@@ -2,61 +2,51 @@ package com.expedia.calender.model.request;
 
 import java.time.LocalDateTime;
 
-public class EventRequestType
-{
-	String title;
-	LocalDateTime startTime;
-	LocalDateTime endTime;
-	String location;
-	String owner;
+public class EventRequestType {
 
-	public String getTitle()
-	{
-		return title;
-	}
+  String title;
+  LocalDateTime startTime;
+  LocalDateTime endTime;
+  String location;
+  String owner;
 
-	public void setTitle(String title)
-	{
-		this.title = title;
-	}
+  public String getTitle() {
+    return title;
+  }
 
-	public LocalDateTime getStartTime()
-	{
-		return startTime;
-	}
+  public void setTitle(String title) {
+    this.title = title;
+  }
 
-	public void setStartTime(LocalDateTime startTime)
-	{
-		this.startTime = startTime;
-	}
+  public LocalDateTime getStartTime() {
+    return startTime;
+  }
 
-	public LocalDateTime getEndTime()
-	{
-		return endTime;
-	}
+  public void setStartTime(LocalDateTime startTime) {
+    this.startTime = startTime;
+  }
 
-	public void setEndTime(LocalDateTime endTime)
-	{
-		this.endTime = endTime;
-	}
+  public LocalDateTime getEndTime() {
+    return endTime;
+  }
 
-	public String getLocation()
-	{
-		return location;
-	}
+  public void setEndTime(LocalDateTime endTime) {
+    this.endTime = endTime;
+  }
 
-	public void setLocation(String location)
-	{
-		this.location = location;
-	}
+  public String getLocation() {
+    return location;
+  }
 
-	public String getOwner()
-	{
-		return owner;
-	}
+  public void setLocation(String location) {
+    this.location = location;
+  }
 
-	public void setOwner(String owner)
-	{
-		this.owner = owner;
-	}
+  public String getOwner() {
+    return owner;
+  }
+
+  public void setOwner(String owner) {
+    this.owner = owner;
+  }
 }
