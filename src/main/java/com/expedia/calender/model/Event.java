@@ -2,6 +2,8 @@ package com.expedia.calender.model;
 
 import java.time.LocalDateTime;
 import javax.persistence.Entity;
+import javax.persistence.EnumType;
+import javax.persistence.Enumerated;
 import javax.persistence.GeneratedValue;
 import javax.persistence.GenerationType;
 import javax.persistence.Id;
@@ -21,4 +23,7 @@ public class Event {
   LocalDateTime endTime;
   String location;
   String user;
+
+  @Enumerated(EnumType.STRING)
+  EventType eventType;
 }
